@@ -13,7 +13,7 @@ async function Navlinks() {
         {categories.map((category) => (
           <li
             key={category.id}
-            className="flex shrink-0 cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-green-50 hover:text-green-700"
+            className="flex  cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-[16px] font-medium text-gray-600 transition hover:bg-green-50 hover:text-green-700 "
           >
             <span>{category.icon}</span>
             <span>{category.nameBn}</span>

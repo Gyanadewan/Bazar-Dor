@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
          <Header></Header>
          <Marquee></Marquee>
-         <main> {children}</main>
+         <main className="flex-1 bg-gray-200">
+           {children}
+           </main>
         </body>
     </html>
   );
