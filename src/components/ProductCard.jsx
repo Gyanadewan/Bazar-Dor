@@ -2,7 +2,6 @@
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go"
 
 function ProductCard({ product }) {
-  console.log(product)
   const increased = product.today > product.yesterday
   const percentage =
     product.yesterday > 0
