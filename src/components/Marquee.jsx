@@ -15,10 +15,14 @@ async function Marquee() {
         {headlines.map((product) => (
          <span
     key={product.id}
-    className="mx-6 inline-flex items-center flex-nowrap whitespace-nowrap"
+    className="mx-6 inline-flex items-center"
    >
-  {product.image}   {product.nameBn}   {product.today} টাকা/
-  {product.unit === "kg" ? "কেজি" : product.unit}
+  {product.image}  
+  <span className="text-black">
+     {product.nameBn}  {product.today} টাকা/ 
+     {product.unit === "kg" ? "কেজি" : product.unit}
+    </span>   
+ 
 
      {product.change?.dir === "up" ? (
     <span className="ml-2 inline-flex items-center whitespace-nowrap text-red-500">

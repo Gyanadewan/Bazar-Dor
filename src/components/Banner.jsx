@@ -10,7 +10,7 @@ function Banner() {
   })
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-5">
+    <section className="max-w-7xl mx-auto py-4">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 bg-white rounded-2xl px-6 py-5 md:px-12 md:py-12 shadow-sm">
 
         <div className="flex flex-col items-start gap-5">
