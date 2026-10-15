@@ -1,6 +1,7 @@
 
 import Image from "next/image"
 import Navlinks from "./Navlinks"
+import Link from "next/link"
 
 function Header() {
   const bdDate = new Date().toLocaleDateString("bn-BD", {
@@ -17,7 +18,8 @@ function Header() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <Image
+          <Link href={"/"}>
+               <Image
               className="rounded-2xl bg-green-600 p-2"
               src="/images/logo-icon.png"
               width={45}
@@ -25,6 +27,7 @@ function Header() {
               alt="বাজার দর লোগো"
               priority
             />
+          </Link>
 
             <div>
               <h1 className="text-xl font-bold text-green-700 md:text-2xl">

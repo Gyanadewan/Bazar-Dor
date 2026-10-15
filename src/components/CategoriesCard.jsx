@@ -1,7 +1,9 @@
+import Link from "next/link"
 
 
 function CategoriesCard({category}) {
   return (
+  <Link href={`/details/${category.slug}`}>
     <div>
        <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
       <div>
@@ -26,6 +28,8 @@ function CategoriesCard({category}) {
       </div>
     </div>
     </div>
+   </Link>
+    
   )
 }
 

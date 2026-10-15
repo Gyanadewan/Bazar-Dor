@@ -18,10 +18,10 @@ async function page({ params, searchParams }) {
   return 0
 })
   return (
-    <div className="mx-auto max-w-7xl">
+       <div className="mx-auto max-w-7xl">
       <div className="mt-5">
         <CategoryCardHeader
-          category={categories[2]}
+          category={categories[0]}
           total={categories.length}
         />
       </div>

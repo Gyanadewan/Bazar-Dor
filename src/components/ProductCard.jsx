@@ -1,4 +1,5 @@
 
+import Link from "next/link"
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go"
 
 function ProductCard({ product }) {
@@ -9,7 +10,8 @@ function ProductCard({ product }) {
       : 0
 
   return (
-    <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+        <Link href={`/details/${product.slug}`}>
+          <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
       <div>
         <div className="flex items-center gap-3">
      <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gray-100 text-3xl">
@@ -46,6 +48,7 @@ function ProductCard({ product }) {
         </span>
       </div>
     </div>
+        </Link>
   )
 }
 
