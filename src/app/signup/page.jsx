@@ -1,8 +1,27 @@
+"use client"
+import { signUp } from "@/lib/auth-client"
 import Link from "next/link"
 import { FaGithub, FaGoogle } from "react-icons/fa"
 
 
 function page() {
+    const handleSignUp = async (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+    const user = Object.fromEntries(formData.entries())
+    
+    const { data, error } = await signUp.email({
+       ...user,
+      callbackURL: "/", 
+    })
+ if (data){
+  console.log(data)
+ }
+ if (error){
+  console.log(error)
+ }
+    
+  }
   return (
      <div className="flex min-h-screen flex-col items-center justify-center bg-base-200 px-4 py-10">
       <div className="mb-6 text-center">
@@ -17,7 +36,7 @@ function page() {
 
       <div className="card w-full max-w-md bg-base-100 shadow-xl">
         <div className="card-body">
-          <form className="space-y-4">
+          <form onSubmit={handleSignUp} className="space-y-4">
             <fieldset className="fieldset">
               <legend className="fieldset-legend">
                 আপনার নাম
