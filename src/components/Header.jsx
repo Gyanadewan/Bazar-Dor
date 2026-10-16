@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Navlinks from "./Navlinks"
 import Link from "next/link"
+import UserInfo from "./UserInfo"
 
 function Header() {
   const bdDate = new Date().toLocaleDateString("bn-BD", {
@@ -38,20 +39,7 @@ function Header() {
               </p>
             </div>
           </div>
-
-          <div className="flex items-center gap-2">
-          <Link href='/signin'>
-            <button className="rounded-lg border border-green-700 px-3 py-2 text-sm font-medium text-green-700 transition hover:bg-green-50 md:px-5">
-              সাইন ইন
-            </button>
-          </Link>
-
-            <Link href="/signup">
-            <button className="rounded-lg bg-green-700 px-3 py-2 text-sm font-medium text-white transition hover:bg-green-800 md:px-5">
-              সাইন আপ
-            </button>
-            </Link>
-          </div>
+             <UserInfo></UserInfo>
         </div>
 
         <div>
