@@ -1,10 +1,24 @@
 "use client"
-import { signUp } from "@/lib/auth-client"
+import { authClient, signUp } from "@/lib/auth-client"
 import Link from "next/link"
 import { FaGithub, FaGoogle } from "react-icons/fa"
 
 
 function page() {
+  const handleGithubSignUp = async () => {
+    const data = await authClient.signIn.social({
+        provider: "github",
+         callbackURL: "/", 
+        
+    })
+}
+  const handleGoogleSignUp = async () => {
+    const data = await authClient.signIn.social({
+        provider: "github",
+         callbackURL: "/", 
+        
+    })
+}
     const handleSignUp = async (e) => {
     e.preventDefault()
     const formData = new FormData(e.target)
@@ -14,12 +28,12 @@ function page() {
        ...user,
       callbackURL: "/", 
     })
- if (data){
-  console.log(data)
- }
- if (error){
-  console.log(error)
- }
+     if (data){
+      console.log(data)
+      }
+    if (error){
+     console.log(error)
+     }
     
   }
   return (
@@ -106,7 +120,7 @@ function page() {
         <div className="divider">অথবা</div>
 
    <div className="flex flex-col gap-3">
-  <button
+  <button onClick={handleGoogleSignUp }
     type="button"
     className="btn btn-outline w-full"
   >
@@ -114,7 +128,7 @@ function page() {
     Google দিয়ে চালিয়ে যান
     </button>
 
-    <button
+    <button onClick={handleGithubSignUp}
     type="button"
     className="btn btn-outline w-full"
       >

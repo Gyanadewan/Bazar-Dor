@@ -1,6 +1,8 @@
 "use client"
+import UpdateName from "@/components/UpdateName"
 import { authClient } from "@/lib/auth-client"
 import { HiOutlineArrowUturnLeft } from "react-icons/hi2"
+import { toast } from "react-toastify"
 
 
 function page() {
@@ -8,9 +10,11 @@ function page() {
     const user = session?.user
      const handleSignout = async () => {
         await authClient.signOut()
+        toast.success("সফলভাবে সাইন আউট হয়েছে!")
       }
+
   return (
-    <div className="max-w-2xl mx-auto  mt-5 text-black ">
+    <div className="max-w-2xl mx-auto  mb-12 mt-5 text-black">
        <div className="py-3">
         <h2 className="text-xl font-bold">আমার প্রোফাইল</h2>
         <p className="">আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</p>
@@ -39,18 +43,9 @@ function page() {
              </div>
         </div>
         <div>
-
+               <UpdateName></UpdateName>
         </div>
     </div>
-
-      <div className="card-body bg-white shadow-md p-5 my-5 rounded-2xl">
-        <h3 className="text-xl">তথ্য</h3>
-        <fieldset className="fieldset">
-          <label className="label">নাম </label>
-          <input type="name" className="input w-full bg-white border border-gray-500" placeholder="" />
-          <button className="btn btn-neutral mt-4 bg-green-500">আপডেট </button>
-        </fieldset>
-      </div>
     </div>
  
   )

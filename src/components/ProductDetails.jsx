@@ -1,5 +1,6 @@
 
 import Link from "next/link"
+import { notFound } from "next/navigation"
 import {
   GoTriangleDown,
   GoTriangleUp,
@@ -7,7 +8,9 @@ import {
 import { MdKeyboardArrowRight } from "react-icons/md"
 
 function ProductDetailsPage({ product }) {
-  console.log(product)
+    if (!product) {
+   notFound()
+   }
   const increased = product.today > product.yesterday
   const decreased = product.today < product.yesterday
   const change = product.today - product.yesterday
@@ -38,7 +41,7 @@ function ProductDetailsPage({ product }) {
        </div>
        </div>
 
-              <section className="rounded-2xl border border-gray-200 bg-white p-6">
+  <section className="rounded-2xl border border-gray-200 bg-white p-6">
   <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
     <div className="flex items-center gap-4">
       <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-[#f0f5f0] text-4xl">

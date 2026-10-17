@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 function Banner() {
   const bdDate = new Date().toLocaleDateString("bn-BD", {
@@ -28,9 +29,9 @@ function Banner() {
             দামের পরিবর্তন এক জায়গায়।
           </p>
 
-          <button className="btn bg-green-600 hover:bg-green-700 text-white border-none rounded-lg px-6 py-3">
+          <Link href="/allproducts" className="btn bg-green-600 hover:bg-green-700 text-white border-none rounded-lg px-6 py-3">
             সব পণ্য দেখুন
-          </button>
+          </Link>
         </div>
 
         <div className="relative flex justify-center items-center">

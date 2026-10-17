@@ -4,6 +4,7 @@ import { useState } from "react"
 import { authClient } from "@/lib/auth-client"
 import Link from "next/link"
 import { HiOutlineArrowUturnLeft } from "react-icons/hi2"
+import { toast } from "react-toastify"
 
 function UserDropdown() {
   const { data: session } = authClient.useSession()
@@ -13,6 +14,7 @@ function UserDropdown() {
   const handleSignout = async () => {
     await authClient.signOut()
     setIsOpen(false)
+    toast.success("সফলভাবে সাইন আউট হয়েছে!")
   }
 
   return (
