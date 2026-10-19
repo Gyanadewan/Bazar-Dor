@@ -27,6 +27,5 @@ export const config = {
     "/category/:path*",
     "/details/:path*",
     "/myprofile/:path*",
-    "/signup",
   ],
 };

@@ -12,11 +12,11 @@ function page() {
         
     })
 }
+
   const handleGoogleSignUp = async () => {
     const data = await authClient.signIn.social({
-        provider: "github",
+         provider: "google",
          callbackURL: "/", 
-        
     })
 }
     const handleSignUp = async (e) => {

@@ -1,11 +1,27 @@
 "use client"
 
-import { signIn } from "@/lib/auth-client"
+import { authClient, signIn } from "@/lib/auth-client"
 import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
 import { toast } from "react-toastify"
 
 function SignInPage() {
+
+  const handleGithubSignUp = async () => {
+      const data = await authClient.signIn.social({
+          provider: "github",
+           callbackURL: "/", 
+          
+      })
+  }
+
+  const handleGoogleSignUp = async () => {
+    const data = await authClient.signIn.social({
+         provider: "google",
+         callbackURL: "/", 
+    })
+  }
+
   const handleSignIn = async (e) => {
     e.preventDefault()
 
@@ -92,7 +108,7 @@ function SignInPage() {
 
           <button
             type="button"
-            onClick={() => handleSocialSignIn("google")}
+            onClick={handleGoogleSignUp}
             className="btn btn-outline w-full"
           >
             Google দিয়ে সাইন ইন করুন
@@ -100,7 +116,7 @@ function SignInPage() {
 
           <button
             type="button"
-            onClick={() => handleSocialSignIn("github")}
+            onClick={handleGithubSignUp}
             className="btn btn-outline w-full"
           >
             <FaGithub size={18} />
