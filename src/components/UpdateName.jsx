@@ -21,7 +21,7 @@ import { toast } from "react-toastify"
      toast.success("নাম সফলভাবে আপডেট হয়েছে!")
        }
   return (
-     <div className="card-body bg-white shadow-md p-5 my-5 rounded-2xl">
+     <div className="card-body bg-white shadow-md p-6 my-5 rounded-2xl">
         <h3 className="text-xl">তথ্য</h3>
       <form onSubmit={handleUpdateName}>
           <fieldset className="fieldset">
