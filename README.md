@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 বাজার দর (BazarDor)
 
-## Getting Started
+## 🔗 Links
 
-First, run the development server:
+- **Live Website:** [https://bazardor-web.vercel.app/](https://bazardor-web.vercel.app/)
+- **GitHub Repository:** [https://github.com/Gyanadewan/Bazar-Dor](https://github.com/Gyanadewan/Bazar-Dor)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+BazarDor is a Bengali-language web application designed to help users check the daily prices of essential products in Bangladesh. Users can explore product prices, compare price changes, and view market-wise pricing information in one place.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The application provides an easy-to-use interface for browsing products by category and understanding which products have increasing or decreasing prices.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+1. 📊 View daily prices of essential products.
+2. 📈 Explore products with increasing and decreasing prices.
+3. 🛍️ View detailed product information and market-wise prices.
+4. 🗂️ Browse products by category.
+5. 💰 Sort products by price.
+6. 📢 Display product prices using a scrolling marquee ticker.
+7. 🔐 Register and log in using email and password.
+8. 🌐 Sign in with Google and GitHub.
+9. 🔔 Display toast notifications for user feedback.
+10. 📱 Responsive design for desktop, tablet, and mobile devices.
+11. 🇧🇩 Bengali-language interface for a better user experience.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js** — React framework for building the web application.
+- **JavaScript** — For application logic and interactivity.
+- **Tailwind CSS** — For styling and responsive layouts.
+- **DaisyUI** — For reusable UI components.
+- **Better Auth** — For user authentication.
+- **React Toastify** — For displaying toast notifications and feedback messages.
+- **Marquee** — For displaying scrolling product prices.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Author
 
-## Deploy on Vercel
+**Gyana Ratan Dewan**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **GitHub:** [Gyanadewan](https://github.com/Gyanadewan)

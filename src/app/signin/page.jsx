@@ -41,16 +41,6 @@ function SignInPage() {
     }
   }
 
-  const handleSocialSignIn = async (provider) => {
-    const { error } = await signIn.social({
-      provider,
-      callbackURL: "/",
-    })
-    if (error) {
-      alert(error.message)
-    }
-  }
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-base-200 px-4 py-10">
       <div className="mb-6 text-center">
