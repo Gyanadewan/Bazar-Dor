@@ -14,8 +14,8 @@ function page() {
       }
 
   return (
-    <div className="max-w-2xl mx-auto  mb-12 mt-5 text-black">
-       <div className="py-3">
+    <div className="max-w-2xl mx-auto  mt-5 text-black ">
+       <div className="py-3 ">
         <h2 className="text-xl font-bold">আমার প্রোফাইল</h2>
         <p className="">আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</p>
        </div>
@@ -30,8 +30,8 @@ function page() {
           className="h-10 w-10 rounded-full "
         />
               <div>
-                 <h3>Rezwan Ahmed</h3>
-                <p>rezwanahmed@gmail.com</p>
+                 <h3>{user.name}</h3>
+                <p>{user.email}</p>
               </div>
              <div className="ml-auto">
                     <button onClick={handleSignout}

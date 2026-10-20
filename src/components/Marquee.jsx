@@ -10,7 +10,7 @@ async function Marquee() {
   const headlines = data
 
   return (
-    <div className=" bg-white py-3 border-b border-gray-300">
+    <div className="  bg-white py-3 border-b border-gray-300">
       <MarqueeText direction="right" duration={20}>
         {headlines.map((product) => (
          <span
